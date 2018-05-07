@@ -6,4 +6,7 @@ DIR=`dirname "${BASH_SOURCE}"`
 TIME_ON=`${DIR}/sunset.py --offsetmins=-30`
 
 # Turn the lights on.
-at ${TIME_ON} < ${DIR}/cmd_ifttt_event.sh lights_on_living_room
+echo "${DIR}/cmd_ifttt_event.sh lights_on_living_room" | at ${TIME_ON}
+
+# Turn the lights off.
+echo "${DIR}/cmd_ifttt_event.sh lights_off_living_room" | at 22:30
