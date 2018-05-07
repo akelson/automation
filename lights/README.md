@@ -1,6 +1,9 @@
 Perform light automation tasks.
 
-The lights are controlled by a Smart Life socket and using an IFTTT maker action.
+The lights are controlled by a Smart Life socket and using an IFTTT maker WebHooks action.
+
+Information about IFTTT maker WebHooks can be found at:
+https://ifttt.com/maker_webhooks
 
 My IFTTT maker key is located at ~/ifttt_maker_key.
 
