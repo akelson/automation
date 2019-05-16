@@ -18,3 +18,9 @@ The automation is performed in three steps:
    turn the lights on or off at certain times of day.
 1. The lights are turned on or off by scripts which performs web requests
    to maker.ifttt.com to trigger events.
+
+Installation
+--------------------------------------------------------------------------------
+
+Install crontab:
+contab crontab
