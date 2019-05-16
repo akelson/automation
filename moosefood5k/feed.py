@@ -12,7 +12,7 @@ def feed(grams):
     config = getConfig()
     url = config['url']
     grams_per_sec = float(config['grams_per_min']) / 60
-    feed_dur_sec = str(int(grams * grams_per_sec))
+    feed_dur_sec = str(int(grams / grams_per_sec))
     print feed_dur_sec
     r = requests.get(url + '/feed', params = {'seconds' : feed_dur_sec})
     print r
