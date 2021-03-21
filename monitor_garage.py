@@ -33,7 +33,7 @@ if __name__ == "__main__":
                     send_notification = False
                 
             if send_notification:
-                ha.sendNotification("Garage door has been open for {} minutes.".format(int(open_duration)))
+                ha.sendNotification("Garage door has been open for {} minutes.".format(int(open_duration)), 1)
                 monitor_info["last_notification_time"] = cur_time
 
     else:

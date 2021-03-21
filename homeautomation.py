@@ -13,7 +13,7 @@ def readConfig():
     with open(config_path) as f:
         return json.loads(f.read())
 
-def sendNotification(msg):
+def sendNotification(msg, priority=0):
     logging.info("sending notification: {}".format(msg))
     config = readConfig()
     conn = http.client.HTTPSConnection("api.pushover.net:443")
@@ -22,6 +22,7 @@ def sendNotification(msg):
         "token": config["pushover"]["APP_TOKEN"],
         "user": config["pushover"]["USER_KEY"],
         "message": msg,
+        "priority": priority,
       }), { "Content-type": "application/x-www-form-urlencoded" })
     logging.info("pushover api response: {}".format(conn.getresponse().status))
 
